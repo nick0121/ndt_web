@@ -1,5 +1,5 @@
 node_modules
-
+pipfile
 /ndt_site/static
 /static
 # Created by https://www.gitignore.io/api/node,python,django
