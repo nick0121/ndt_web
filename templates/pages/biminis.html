@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!------------------------Content for Biminis page--------------------------------->
+<Main>
+ 
+    <div class="heading">
+        <h2>Biminis</h2>
+        <p>NDT Wakeboard Tower Bimini’s are made from high quality Sunbrella® fabrics and come in many colors. Our biminis are strong, lightweight, and built to withstand extreme conditions. Sunbrella® fabrics resist sun, wind and water exposure and retain their beauty for years. The over the top style bimimi allows for the maximum amout of headroom while retaining great coverage for shade. All NDT biminis are custom made to fit each tower and fold neatly out of the way when not in use.</p>
+        <img src="{% static 'img/finished/bimini.jpg' %}" alt="">
+    </div>
+
+    <div class="bimini-gallery">
+        <h3>Highest quality biminis on the market</h3>
+        <p>New Dimension Tower Bimini’s are specifically designed and fabricated to fit your exact make and model of boat tower. Each NDT Bimini is specially designed with easy release brackets which allow the bimini to be folded and secured to the tower for storage. Most aftermarket biminis come with thin aluminum tubing and cheap plastic fittings. NDT uses the highest quality stainless steel fittings and tubing available to ensure our biminis not only look great but function great as well.</p>
+
+        <div class="img-container">
+            <div class="img-card">
+                <img src="{% static 'img/finished/hinge_bimini.jpg' %}" alt="">
+                <p>heavy duty stainless fittings with quick release for easy detachment.</p>
+            </div>
+            <div class="img-card">
+                <img src="{% static 'img/finished/ball_joint_bimini.jpg' %}" alt="">
+                <p>Ball joint style fittings to allow bimini to fold tightly against tower.</p>
+            </div>
+            <div class="img-card">
+                <img src="{% static 'img/finished/rear_hinge.jpg' %}" alt="">
+                <p>Fittings securely fastened with rivets to prevent unwanted looseness.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="spacer"></div>
+
+
+    <!-- section -->
+    <div class="container" id="shop-content">
+        <div class="left-column">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+        </div>
+
+        <div class="middle-column">
+            <!--Middle column images of each color to be replaced with jquery-->
+            <img data-image="black" src="{% static 'img/bimini_cat.jpg' %}" alt="" class="active">
+            <img data-image="red" src="{% static 'img/bimini.jpg' %}" alt="">
+            <img data-image="blue" src="{% static 'img/clothing_cat.jpg' %}" alt="">
+        </div>
+
+        <div class="right-column">
+            <!--Right column markup-->
+            <div class="product-description">
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloremque soluta tenetur amet dicta ducimus temporibus ea incidunt voluptatibus ipsa.</p>
+            </div>
+            <div class="product-config">
+                <!--Color chooser-->
+                <div class="product-color">
+                    <span>Color</span>
+
+                    <div class="color-choose">
+                        <div>
+                            <input data-image="black" type="radio" id="black" name="color" value="black" checked>
+                            <label for="black"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="red" type="radio" id="red" name="color" value="red">
+                            <label for="red"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                            <label for="blue"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="orange" type="radio" id="orange" name="color" value="orange">
+                            <label for="orange"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="green" type="radio" id="green" name="color" value="green">
+                            <label for="green"><span></span></label>
+                        </div>
+                        <div>
+                            <input data-image="purple" type="radio" id="purple" name="color" value="purple">
+                            <label for="purple"><span></span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tower-config">
+                    <span>Boat model</span>
+                    <div class="tower-choose">
+                        <button>one</button>
+                        <button>two</button>
+                        <button>three</button>
+                    </div>
+
+                    <a href="#!">How to install a bimini</a>
+                </div>
+            </div>
+
+            <div class="product-price">
+                <span>$799.99</span>
+                <a href="#!" class="cart-btn">Add to cart</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Make another section to be temporary until checkout function added-->
+    <div class="temp-section" id="temp-section">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <img src="{% static 'img/clothing_cat.jpg' %}" alt="">
+            </div>
+            <div class="col-md-4">
+                <div class="temp-description">
+                    <h2 class="temp-title">Title</h2>
+                    <p class="temp-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam quidem molestiae nemo obcaecati quisquam.</p>
+                    
+                                    <!--Color chooser-->
+                    <div class="product-color">
+                    <span>Color</span>
+                        <div class="color-choose">
+                            <div>
+                                <input data-image="black" type="radio" id="black" name="color" value="black" checked>
+                                <label for="black"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="red" type="radio" id="red" name="color" value="red">
+                                <label for="red"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                                <label for="blue"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="orange" type="radio" id="orange" name="color" value="orange">
+                                <label for="orange"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="green" type="radio" id="green" name="color" value="green">
+                                <label for="green"><span></span></label>
+                            </div>
+                            <div>
+                                <input data-image="purple" type="radio" id="purple" name="color" value="purple">
+                                <label for="purple"><span></span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--price and thumbnails-->
+                    <p class="temp-price">$799.99</p>
+                    <button class="btn btn-success">Add to order</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--End temp section-->
+
+
+    <div class="spacer"></div>
+
+</Main>
+{% endblock %}

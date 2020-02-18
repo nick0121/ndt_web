@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <!------------------------Content for Accessories page--------------------------------->
+<main>
+
+    <div class="main-description">
+        <h2>NDT Parts & Accessories</h2>
+        <p>NDT offers a wide variety of accessories for your NDT wakeboard tower. Our boardracks are 100% made in house from high quality CNC machined 6061 billet aluminum. Lost a part? we offer replacement parts of all the hardware we use. Add the highest quality bimini on the market to your NDT tower to keep you cool on the lake. </p>
+        <br>
+        <p>While your here, check out our NDT apperal. Look good this summer with our custom made tees and hats.</p>
+    </div>
+
+    <!-- Highlighted content -->
+    <div class="highlighted container">
+        <h2>Accessories</h2>
+        <div class="row">
+            <div class="item col-sm col-lg-4">
+                <a href="{% url 'biminis' %}"><img class="highlighted" src="{% static 'img/finished/bimini.jpg' %}" alt=""></a>
+                <a href="{% url 'biminis' %}"><p>Biminis</p></a>
+            </div>
+            <div class="item col-sm col-lg-4">
+                <a href="{% url 'accessory' query='board_rack' %}"><img class="highlighted" src="{% static 'img/racks.jpg' %}" alt=""></a>
+                <a href="{% url 'accessory' query='board_rack' %}"><p>Racks</p></a>
+            </div>
+            <div class="item col-sm col-lg-4">
+                <a href="{% url 'accessory' query='gear' %}"><img class="highlighted" src="{% static 'img/clothing_cat.jpg' %}" alt=""></a>
+                <a href="{% url 'accessory' query='gear' %}"><p>Parts & Gear</p></a>
+            </div>
+        </div>
+    </div>
+
+    <!----------------Cards------------------->
+    <div class="container">
+        <div class="a-card-container" id="parts">
+            <h2>Parts & Gear</h2>
+    
+            <div class="box">
+    
+                {% if products %}
+                    {% for product in products %}
+                    <div class="a-card">
+                        <a href="#!"><img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img"></a>
+                        <a href="#!"><h3 class="a-card-title">{{ product.name }}</h3></a>
+                        <p class="a-card-price">${{ product.price }}</p>
+                        <p class="a-card-tag">{{ product.description }}</p>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <h2>No products to display</h2>
+                {% endif %}
+    
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="spacer"></div>
+
+</main>
+{% endblock %}
