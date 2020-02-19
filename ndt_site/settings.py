@@ -48,7 +48,7 @@ except NameError:
 
 
 
-ALLOWED_HOSTS = ['66.228.49.205', 'localhost']
+ALLOWED_HOSTS = ['66.228.49.205', 'localhost', '0.0.0.0']
 
 
 # Application definition
