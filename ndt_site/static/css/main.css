@@ -1602,6 +1602,26 @@ article a:hover {
   background-color: #64af3d;
 }
 
+/********************** Product page ***************/
+.msg-box {
+  height: 100px;
+  width: 100%;
+  background-color: #f8f8f8;
+  content: '';
+}
+
+.main-columns {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+.focused-image li img {
+  width: 100%;
+}
+
+
+
 
 /* Responsive */
 @media (max-width: 940px) {

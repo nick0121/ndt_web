@@ -4,31 +4,68 @@
 
 {% block content %}
 <main>
+    <div class="spacer"></div>
     <div class="msg-box"></div>
 
     <!--Item title-->
-    <div class="product-title">
+    <!-- <div class="product-title">
         <h2>1997-2001 Prostar 197</h2>
-    </div>
+    </div> -->
     <!--top section with main image and smaller images below on largew screen display to left-->
-    <div class="gallery-product">
+    <div class="main-columns">
+        <div class="left-con">
+
         <!--add swiper box-->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="{% static 'img/00-001_Prostar_195.jpg' %}" alt="">
+            <!-- <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/racks.jpg' %}" alt="" class="focused-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/racks.jpg' %}" alt="" class="focused-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/racks.jpg' %}" alt="" class="focused-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/racks.jpg' %}" alt="" class="focused-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/racks.jpg' %}" alt="" class="focused-image">
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="{% static 'img/00-001_Prostar_195_angle.jpg' %}" alt="">
+            </div> -->
+
+            <!--thumbnails vertical -->
+            <div class="thumbnails">
+                <div class="focused-image">
+                    <img src="{% static 'img/racks.jpg' %}" alt="">
                 </div>
-                <div class="swiper-slide">
-                    <img src="{% static 'img/00-001_Prostar_195_back.jpg' %}" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="{% static 'img/00-001_Prostar_195_collapsed.jpg' %}" alt="">
-                </div>
+                <ul>
+                    <li><img src="{% static 'img/racks.jpg' %}" alt="" style="width:50px; height:50px;" ></li>
+                    <li><img src="{% static 'img/racks.jpg' %}" alt="" style="width:50px; height:50px;" ></li>
+                    <li><img src="{% static 'img/racks.jpg' %}" alt="" style="width:50px; height:50px;" ></li>
+                    <li><img src="{% static 'img/racks.jpg' %}" alt="" style="width:50px; height:50px;" ></li>
+                </ul>
+                
+
+
             </div>
         </div>
+
+
+        <div class="right-con">
+            <h2>Title</h2>
+            <p>description</p>
+            <p>price</p>
+            <ul>
+                <li><p>list</p></li>
+                <li><p>list</p></li>
+                <li><p>list</p></li>
+                <li><p>list</p></li>
+            </ul>
+        </div>
+
     </div>
 
 

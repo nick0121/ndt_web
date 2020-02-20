@@ -182,12 +182,12 @@ except NameError:
     pass
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # when collectstatic runs this it will collect all static files and put them here
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static')
 # ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
