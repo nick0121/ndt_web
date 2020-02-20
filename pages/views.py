@@ -98,4 +98,7 @@ def orders(request):
 
 ######################################################## product views #########################################
 def product(request):
+
+    ## Add products from models
+
     return render(request, 'pages/product.html')
