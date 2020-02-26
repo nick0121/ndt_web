@@ -30,6 +30,7 @@ MANUFACTURERS = (
     ('caravelle', 'Caravelle'),
     ('chaparral', 'Chaparral'),
     ('crownline', 'Crownline'),
+    ('ebbtide', 'Ebbtide'),
     ('toyota', 'Toyota'),
     ('ndt', 'NDT'),
     ('not_listed', 'Not Listed')
