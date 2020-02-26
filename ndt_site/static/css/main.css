@@ -235,6 +235,8 @@ h1, h2, h3 {
 .boat-manufac img {
   width: 80%;
   margin-bottom: 50px;
+  height: 3.7rem;
+  object-fit: contain;
   /* opacity: 0.7; */
 }
 
@@ -2168,6 +2170,7 @@ article a:hover {
   /*Boat manufac**********************************/
   .logo-item img {
     width: 60%;
+    height: 4.2rem;
   }
 
   /*Bimini section*********************************/

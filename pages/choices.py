@@ -27,6 +27,10 @@ MANUFACTURERS = (
     ('nautique', 'Nautique'),
     ('yamaha', 'Yamaha'),
     ('supra', 'Supra'),
+    ('caravelle', 'Caravelle'),
+    ('chaparral', 'Chaparral'),
+    ('crownline', 'Crownline'),
+    ('toyota', 'Toyota'),
     ('ndt', 'NDT'),
     ('not_listed', 'Not Listed')
 )
