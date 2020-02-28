@@ -22,6 +22,7 @@ MANUFACTURERS = (
     ('malibu', 'Malibu'),
     ('bayliner', 'Bayliner'),
     ('starcraft', 'Startcraft'),
+    ('sea ray', 'Sea Ray'),
     ('centurion', 'Centurion'),
     ('tige', 'Tige'),
     ('nautique', 'Nautique'),
@@ -33,7 +34,7 @@ MANUFACTURERS = (
     ('ebbtide', 'Ebbtide'),
     ('toyota', 'Toyota'),
     ('ndt', 'NDT'),
-    ('not_listed', 'Not Listed')
+    ('not listed', 'Not Listed')
 )
 
 
