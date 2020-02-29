@@ -73,6 +73,7 @@
                     {% for tower in towers %}
                         
                             <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
+                        <a href="#!">
                             <div class="card">
                                 <img src="{{ tower.first_image.image.url }}" alt="{{ tower.first_image.description }}" class="card-image">
                                 
@@ -80,9 +81,11 @@
                                 <!-- <p class="card-tag">{{ tower.description }}</p> -->
                                 <div class="card-bottom">
                                     <p class="card-price">${{ tower.price | intcomma }}</p>
-                                    <!-- <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a> -->
+                                    <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
                                 </div>
                             </div>
+                        </a>
+
                         
                     {% endfor %}
                 {% else %}
