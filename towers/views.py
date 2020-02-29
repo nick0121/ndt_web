@@ -6,12 +6,6 @@ from .forms import SearchForm
 ################################# From index page no link parameter ############# Load all towers
 def index(request):
 
-
-    # width = window.screen.width
-
-    # if width > 768:
-
-
     has_id = False
     
 
@@ -21,16 +15,12 @@ def index(request):
         towers = Towers.objects.filter(manufacturer=selection)
         main = Images.objects.filter(manufacturer=selection, orientation='main')
         has_id = True
-        # angled = Images.objects.filter(manufacturer=selection, orientation='angled')
-        # back = Images.objects.filter(manufacturer=selection, orientation='back')
-        # collapsed = Images.objects.filter(manufacturer=selection, orientation='collapsed')
+
         
     else:
         towers = Towers.objects.all()
         main = Images.objects.filter(orientation='main')
-        # angled = Images.objects.filter(orientation='angled')
-        # back = Images.objects.filter(orientation='back')
-        # collapsed = Images.objects.filter(orientation='collapsed')
+
     
 
     context = {
@@ -38,10 +28,6 @@ def index(request):
         'form': form,
         'main_img': main,
         'has_id': has_id,
-        # 'width': width,
-        # 'ang_img': angled,
-        # 'back_img': back,
-        # 'coll_img': collapsed,
     }
 
     return render(request, 'towers/towers.html', context)
@@ -57,18 +43,14 @@ def tower(request, tower_id):
     towers = Towers.objects.filter(manufacturer=tower_id)
 
     main = Images.objects.filter(manufacturer=tower_id, orientation='main')
-    # angled = Images.objects.filter(manufacturer=tower_id, orientation='angled')
-    # back = Images.objects.filter(manufacturer=tower_id, orientation='back')
-    # collapsed = Images.objects.filter(manufacturer=tower_id, orientation='back')
+
 
 
     context = {
         'towers': towers,
         'form': form,
         'main_img': main,
-        # 'ang_img': angled,
-        # 'back_img': back,
-        # 'coll_img': collapsed,
+
     }
 
     return render(request, 'towers/towers.html', context)
