@@ -67,11 +67,13 @@ def accessory(request, query):
 
 ############################################################# BIMINIS VIEWS ############################################
 def biminis(request):
+    products = Products.objects.filter(images__manufacturer="ndt")
 
     form = SearchForm()
 
     context = {
-        'form': form
+        'form': form,
+        'products': products
     }
     
     return render(request, 'pages/biminis.html', context)

@@ -31,7 +31,7 @@
 
         </div>
     </div>
-    <div class="spacer"></div>
+    <!-- <div class="spacer-small"></div> -->
 
 
     <!-- section -->
@@ -163,6 +163,77 @@
     </div>
 
     <!--End temp section-->
+    <!----------------ACCESORIES INFORMATION----------------------------->
+    <section class="accessories" id="accessories">
+        <div class="accessories-wrapper">
+            <h2 class="options">Featured accessories</h2>
+            <p>NDT offers several options for accessories and customization of towers. All our accessories are made in house with the highest quality materials.</p>
+            <a href="{% url 'accessories' %}">Shop Accessories</a>
+            <div class="image-gallery">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        {% for product in products %}
+                            <div class="swiper-slide">
+                                <div class="acc-card">
+                                    <img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="acc-card-img">
+                                    <h3 class="acc-card-title">{{ product.name }}</h3>
+                                    <p class="acc-card-tag">{{ product.description }}</p>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <!-- <div class="spacer"></div> -->
+        </div>
+    </section>
+
+
+    <div class="spacer-small" id="reviews"></div>
+
+    <div class="card-container-tower">
+        <h3>What our customers are saying</h3>
+        <div class="reviews">
+            <div class="review-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="review-name">Worth every penny!</h3>
+                <p class="review-text">This tower made an old boat new again. The tower fit beautifully on my older-model Bayliner – it looks great! It also makes wakeboarding far more enjoyable for my family – my sons and I are getting much higher out of the water and having a great time. We also use the boat much more often than we did before. I also went back to add some speakers and lights which really set the whole thing off and are a lot of fun out on the water. I couldn’t have asked for more. – Ben P.</p>
+            </div>
+            <div class="review-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="review-name">Worth the wait and effort!</h3>
+                <p class="review-text">It took a while to get the tower, but it was well worth the wait! The fit and finish is on par with Zero-Flex and the bolt points are just as sleek. I called New Dimension Towers directly for some advice and they were great. I’m fairly handy with tools, etc., and still found this challenging. I put mine on a 1999 ProStar – the difficult part was the mounting of the backing plates, I had to do a lot of it by feel. Just be patient and you will be rewarded with an awesome tower. - Mike</p>
+            </div>
+            <div class="review-card">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="review-name">No Question. This is your tower!</h3>
+                <p class="review-text">Had the tower installed on my 2001 Mastercraft ProStar 190. It’s tight! It’s a dead ringer for the factory Zero-Flex tower for half the price. Pimped it out with a Mako 6 light bar. Now we are lighting up the night. New Dimension hand makes each tower specifically for your boat. If you need a tower this is the only way to go. - Bruce C.</p>
+            </div>
+        </div>
+    </div>
 
 
     <div class="spacer"></div>
