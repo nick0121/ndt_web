@@ -73,7 +73,7 @@ def biminis(request):
 
     context = {
         'form': form,
-        'products': products
+        'products': products,
     }
     
     return render(request, 'pages/biminis.html', context)
