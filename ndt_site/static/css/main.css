@@ -396,18 +396,18 @@ body {
   background-color: #000;
 }
 
-.accessories-wrapper .swiper-container {
-  max-width: 90%;
+.image-gallery .swiper-container {
+  width: 100%;
 }
 
 /* swiper slide card */
-.acc-card {
-  border: none;
-  border-radius: 4px;
-  width: 12rem;
-  background-color: #fff;
-  margin: 0 auto;
-}
+/* .acc-card { */
+  /* border: none; */
+  /* border-radius: 4px; */
+  /* width: 12rem; */
+  /* background-color: #fff;
+  margin: 0 auto; */
+/* } */
 
 .acc-card a {
   background-color: #fff;
@@ -419,7 +419,7 @@ body {
 }
 
 h3.acc-card-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333;
   margin: 0;
@@ -428,6 +428,7 @@ h3.acc-card-title {
 
 p.acc-card-tag {
   text-align: center;
+  font-size: .9rem;
 }
 
 .call {
@@ -843,10 +844,10 @@ footer .copy i {
   margin-bottom: 20px;
 }
 
-.hero-top img {
+/* .hero-top img {
   width: 100%;
   height: auto;
-}
+} */
 
 .top-img img {
   width: 100%;
@@ -1111,7 +1112,7 @@ footer .copy i {
 .top-container h1 {
   padding-top: 150px;
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .top-container h6 {
@@ -1148,7 +1149,7 @@ footer .copy i {
   margin-right: auto;
   background-color: #DFEEEE;
   transform: rotate(45deg);
-  top: -25px;
+  top: -40px;
 }
 
 
@@ -1160,7 +1161,7 @@ footer .copy i {
 
 .reviews-container {
   width: 100%;
-  height: 450px;
+  height: auto;
   background-color: #DFEEEE;
   text-align: justify;
   line-height: 1.6;
@@ -1171,7 +1172,9 @@ footer .copy i {
   font-size: 1.6rem;
 }
 
-
+.reviews-container p {
+  padding-bottom: 50px;
+}
 
 .bottom-container {
   background-color: #f4f4f4;
