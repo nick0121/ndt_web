@@ -45,12 +45,11 @@ def tower(request, tower_id):
     main = Images.objects.filter(manufacturer=tower_id, orientation='main')
 
 
-
     context = {
         'towers': towers,
         'form': form,
         'main_img': main,
-
+        'id': tower_id,
     }
 
     return render(request, 'towers/towers.html', context)

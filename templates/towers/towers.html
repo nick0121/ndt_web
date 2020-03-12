@@ -57,6 +57,8 @@
                     {% with towers|first as tower %}
                         <h3>{{tower.get_name|title}}</h3>
                     {% endwith %}
+                {% elif id %}
+                    <h3>{{id}}</h3>
                 {% else %}
                     <h3>All NDT Towers</h3>
                 {% endif %}
@@ -64,7 +66,6 @@
                 <h3>NDT Hybrid Tower</h3>
             {% endif %}
             
-
             <div class="box">
 
                 {% if towers %}

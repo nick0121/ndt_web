@@ -1054,7 +1054,8 @@ footer .copy i {
 .card-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 102px;
+  object-fit: cover;
   border-radius: .25rem .25rem 0 0;
 }
 
@@ -1626,16 +1627,30 @@ footer .copy i {
     width: 10rem;
     height: 17rem;
   }
+
+  .card-image {
+    height: 120px;
+  }
 }
 
+
 /*******************************RULES FOR SCREEN WIDTHS OF 475 PX OR GREATER************************************************************/
-@media screen and (min-width: 475px) {
+@media screen and (min-width: 405px) {
   .header-image img {
     top: -100px;
   }
 
   .acc-card {
     width: 20rem;
+  }
+
+  .card {
+    width: 11rem;
+    height: 18rem;
+  }
+
+  .card-image {
+    height: 132px;
   }
 }
 
@@ -2163,6 +2178,15 @@ footer .copy i {
 
   .col-lg-5 h4 {
     font-size: 1.2rem;
+  }
+
+  .card {
+    width: 13rem;
+    height: 22rem;
+  }
+
+  .card-image {
+    height: 156px;
   }
 }
 
