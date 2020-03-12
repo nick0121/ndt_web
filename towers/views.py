@@ -55,6 +55,6 @@ def tower(request, tower_id):
         'id': tower_id,
         # 'get_id': get_id,
     }
-    
+    print(id)
 
     return render(request, 'towers/towers.html', context)
