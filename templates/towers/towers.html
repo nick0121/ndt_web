@@ -57,7 +57,7 @@
                     {% with towers|first as tower %}
                         <h3>{{tower.get_name|title}}</h3>
                     {% endwith %}
-                {% elif get_id %}
+                {% elif id != '' %}
                     <h3>{{id}}</h3>
                 {% else %}
                     <h3>all NDT towers</h3>

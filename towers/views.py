@@ -43,17 +43,17 @@ def tower(request, tower_id):
     towers = Towers.objects.filter(manufacturer=tower_id)
 
     main = Images.objects.filter(manufacturer=tower_id, orientation='main')
-    get_id = True
+    # get_id = True
 
-    if tower_id == '':
-        get_id = False
+    # if tower_id == '':
+    #     get_id = False
 
     context = {
         'towers': towers,
         'form': form,
         'main_img': main,
         'id': tower_id,
-        'get_id': get_id,
+        # 'get_id': get_id,
     }
     
 
