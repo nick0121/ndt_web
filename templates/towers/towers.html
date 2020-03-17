@@ -13,9 +13,7 @@
     <!-- <h1 class="tower-title">NDT Premium Wakeboard Towers <br> Made in the usa</h1> -->
 
     <!--ADD A BAR FOR CHECKOUT CART AND MESSAGE-->
-
     <div class="spacer-small top"></div>
-
     <div class="top-section">
         <div class="top-img">
             <img src="{% static 'img/finished/tower-2.jpg' %}" alt="">
@@ -70,21 +68,19 @@
 
                 {% if towers %}
                     {% for tower in towers %}
-                        
-                            <!--------- ADD IF MANUFACTURER IS == TO < SELECTION NAME >------------->
-                        <a href="#!">
+    
+                        <a href="{% url 'tower_product' tower.id %}">
                             <div class="card">
                                 <img src="{{ tower.first_image.image.url }}" alt="{{ tower.first_image.description }}" class="card-image">
                                 
                                 <h3 class="card-title">{{tower.title}}</h3>
                                 <div class="card-bottom">
                                     <p class="card-price">${{ tower.price | intcomma }}</p>
-                                    <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a>
+                                    <!-- <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a> -->
                                 </div>
                             </div>
                         </a>
 
-                        
                     {% endfor %}
                 {% else %}
                     <div class="col-md-12">
