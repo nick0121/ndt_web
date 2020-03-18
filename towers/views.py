@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Towers, Images
 from .forms import SearchForm
+# from pages.models import Products
 
 # Create your views here.
 ################################# From index page no link parameter ############# Load all towers
@@ -55,6 +56,20 @@ def tower(request, tower_id):
         'id': tower_id,
         # 'get_id': get_id,
     }
-    print(id)
+    
 
     return render(request, 'towers/towers.html', context)
+
+
+def detail(request, product_id):
+
+    tower = Towers.objects.filter(id=product_id)
+
+    images = Images.objects.filter(tower_id=product_id)
+    
+    context = {
+        'tower': tower,
+        "images": images,
+    }
+
+    return render(request, 'pages/product.html', context)

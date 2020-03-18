@@ -65,6 +65,20 @@ def accessory(request, query):
     
     return render(request, 'pages/accessories.html', context)
 
+
+
+def detail(request, product_id):
+
+    product = Products.objects.filter(id=product_id)
+
+    images = Images.objects.filter(product_id=product_id)
+    
+    context = {
+        'product': product,
+        "images": images,
+    }
+
+    return render(request, 'pages/product.html', context)
 ############################################################# BIMINIS VIEWS ############################################
 def biminis(request):
     # products = Products.objects.filter(images__manufacturer="ndt")
@@ -103,3 +117,5 @@ def product(request):
     ## Add products from models
 
     return render(request, 'pages/product.html')
+
+

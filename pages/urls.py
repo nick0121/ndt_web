@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact', views.contact, name="contact"),
     path('accessories', views.accessories, name="accessories"),
     path('accessory/<query>/', views.accessory, name="accessory"),
+    path('accessories/accessory/<int:product_id>/', views.detail, name="accessory_product"),
     path('biminis', views.biminis, name="biminis"),
     path('installation', views.installation, name="installation"),
     path('faq', views.faq, name="faq"),

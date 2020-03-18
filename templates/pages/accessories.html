@@ -5,7 +5,13 @@
 {% block content %}
     <!------------------------Content for Accessories page--------------------------------->
 <main>
-
+    <!-- <div class="banner-alert">
+        <div class="banner-top">
+            <h3>Site maintenance</h3>
+        </div>
+        <p>We are working on making your experience better. Please call <strong><a href="tel:8659951000">865.995.1000</a></strong> for more information or to place an order</p>
+        <div class="banner-bottom"></div>
+    </div> -->
     <div class="main-description">
         <h2>NDT Parts & Accessories</h2>
         <p>NDT offers a wide variety of accessories for your NDT wakeboard tower. Our boardracks are 100% made in house from high quality CNC machined 6061 billet aluminum. Lost a part? we offer replacement parts of all the hardware we use. Add the highest quality bimini on the market to your NDT tower to keep you cool on the lake. </p>
@@ -26,7 +32,7 @@
                 <a href="{% url 'accessory' query='board_rack' %}"><p>Racks</p></a>
             </div>
             <div class="item">
-                <a href="{% url 'accessory' query='gear' %}"><img class="highlighted" src="{% static 'img/finished/part-gear.jpg' %}" alt="parts and gear from new dimension towers"></a>
+                <a href="{% url 'accessory' query='accessory' %}"><img class="highlighted" src="{% static 'img/finished/part-gear.jpg' %}" alt="parts and gear from new dimension towers"></a>
                 <a href="{% url 'accessory' query='gear' %}"><p>Parts & Gear</p></a>
             </div>
         </div>
@@ -41,12 +47,15 @@
     
                 {% if products %}
                     {% for product in products %}
-                    <div class="a-card">
-                        <a href="#!"><img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img"></a>
-                        <a href="#!"><h3 class="a-card-title">{{ product.name }}</h3></a>
-                        <p class="a-card-price">${{ product.price }}</p>
-                        <p class="a-card-tag">{{ product.description }}</p>
-                    </div>
+                    <a href="{% url 'accessory_product' product.id %}">
+                        <div class="a-card">
+                            <img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img">
+                            <h3 class="a-card-title">{{ product.name }}</h3>
+                            <p class="a-card-price">${{ product.price }}</p>
+                            <p class="a-card-tag">{{ product.description }}</p>
+                        </div>
+                    </a>
+
                     {% endfor %}
                 {% else %}
                     <h2>No products to display</h2>

@@ -88,6 +88,11 @@ class Products(models.Model):
         return self.name
 
 
+    def first_image(self):
+        main_image = Images.objects.filter(product_id=self.id)
+        return main_image[0]
+
+
     def get_image(self):
         
         image = Images.objects.filter(product_id=self.id)
