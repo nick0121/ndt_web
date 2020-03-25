@@ -20,10 +20,21 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+from django.contrib.sitemaps.views import sitemap
+from pages.sitemaps import StaticViewSitemap, TowersSitemap
+
+sitemaps = {
+    # 'pages': ProductSitemap,
+    'static': StaticViewSitemap,
+    'towers': TowersSitemap,
+}
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("pages.urls")),
     path('towers/', include("towers.urls")),
     path('blog/', include("blogs.urls")),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps }, name='sitemap'),
 ] 
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
