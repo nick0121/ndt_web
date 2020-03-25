@@ -1,9 +1,11 @@
 from django.db import models
+from django.urls import reverse
 from django_countries.fields import CountryField
 from localflavor.us.us_states import STATE_CHOICES
 from phone_field import PhoneField
 from .choices import *
 from towers.models import Images
+
 
 
 
@@ -74,6 +76,7 @@ class Address(models.Model):
 class Products(models.Model):
 
     name = models.CharField(max_length=30)
+    slug = models.SlugField(default="url-slug")
     category = models.CharField("Category", max_length=50, choices=CATEGORY, default='accessory')
     price = models.DecimalField(max_digits=7, decimal_places=2)
     weight = models.DecimalField(max_digits=7, decimal_places=2)
@@ -97,6 +100,10 @@ class Products(models.Model):
         
         image = Images.objects.filter(product_id=self.id)
         return image[0]
+
+
+    def get_absolute_url(self):
+        return reverse('accessory_product', kwargs={"category": self.category, "id": self.slug}) 
 
     
     class Meta:

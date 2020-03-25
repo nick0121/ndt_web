@@ -1,7 +1,7 @@
-from django.db import models
 import datetime
 from django.core.validators import MaxValueValidator, MinValueValidator
-
+from django.db import models
+from django.urls import reverse
 from pages.choices import *
 
 
@@ -19,6 +19,7 @@ def max_value_current_year(value):
 class Towers(models.Model):
 
     title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(blank=False, default="this-is-a-slug")
     manufacturer = models.CharField(choices=MANUFACTURERS, default=None, max_length=50)
     start_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
     end_year = models.PositiveIntegerField(default=current_year(), validators=[MinValueValidator(1970), max_value_current_year])
@@ -32,10 +33,18 @@ class Towers(models.Model):
         return name
 
 
+
     def first_image(self):
         main_image = Images.objects.filter(tower_id=self.id, orientation='main')
         return main_image[0]
-                                                                         
+
+
+
+
+    def get_absolute_url(self):
+        return reverse('tower_product', kwargs={"manufacturer_name": self.manufacturer, "boat_id": self.slug}) 
+
+
 
     def __str__(self):
         return self.title

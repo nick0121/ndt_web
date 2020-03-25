@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Towers, Images
 from .forms import SearchForm
+from django.shortcuts import redirect
 # from pages.models import Products
 
 # Create your views here.
@@ -13,10 +14,8 @@ def index(request):
     form = SearchForm()
     if request.method == "POST":
         selection = request.POST.get('tower_id')
-        towers = Towers.objects.filter(manufacturer=selection)
-        main = Images.objects.filter(manufacturer=selection, orientation='main')
         has_id = True
-
+        return redirect('tower_manufacturer', selection)
         
     else:
         towers = Towers.objects.all()
@@ -35,37 +34,32 @@ def index(request):
 
 
 
-
 #################################################### Render from Index manufacturer selection passes tower_id to method
-def tower(request, tower_id):
+def tower_manufacturer(request, manufacturer_name):
 
     form = SearchForm()
 
-    towers = Towers.objects.filter(manufacturer=tower_id)
+    towers = Towers.objects.filter(manufacturer=manufacturer_name)
+    main = Images.objects.filter(manufacturer=manufacturer_name, orientation='main')
 
-    main = Images.objects.filter(manufacturer=tower_id, orientation='main')
-    # get_id = True
-
-    # if tower_id == '':
-    #     get_id = False
 
     context = {
         'towers': towers,
         'form': form,
         'main_img': main,
-        'id': tower_id,
-        # 'get_id': get_id,
     }
     
 
     return render(request, 'towers/towers.html', context)
 
 
-def detail(request, product_id):
+#################################################### Render from towers page passes manufacturer name and boat id
+def tower_product(request, manufacturer_name, boat_id):
 
-    tower = Towers.objects.filter(id=product_id)
+    tower = Towers.objects.filter(slug=boat_id)
+    tower_id = tower[0].id
 
-    images = Images.objects.filter(tower_id=product_id)
+    images = Images.objects.filter(tower_id=tower_id)
     
     context = {
         'tower': tower,

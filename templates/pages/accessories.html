@@ -28,12 +28,12 @@
                 <a href="{% url 'biminis' %}"><p>Biminis</p></a>
             </div>
             <div class="item">
-                <a href="{% url 'accessory' query='board_rack' %}"><img class="highlighted" src="{% static 'img/finished/rack-main.jpg' %}" alt="new dimension towers wakeboard racks"></a>
-                <a href="{% url 'accessory' query='board_rack' %}"><p>Racks</p></a>
+                <a href="{% url 'accessory' query='board-racks' %}"><img class="highlighted" src="{% static 'img/finished/rack-main.jpg' %}" alt="new dimension towers wakeboard racks"></a>
+                <a href="{% url 'accessory' query='board-racks' %}"><p>Racks</p></a>
             </div>
             <div class="item">
                 <a href="{% url 'accessory' query='accessory' %}"><img class="highlighted" src="{% static 'img/finished/part-gear.jpg' %}" alt="parts and gear from new dimension towers"></a>
-                <a href="{% url 'accessory' query='gear' %}"><p>Parts & Gear</p></a>
+                <a href="{% url 'accessory' query='accessory' %}"><p>Parts & Gear</p></a>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
     
                 {% if products %}
                     {% for product in products %}
-                    <a href="{% url 'accessory_product' product.id %}">
+                    <a href="{% url 'accessory_product' product.category product.slug %}">
                         <div class="a-card">
                             <img src="{{ product.get_image.image.url }}" alt="{{ product.get_image.description }}" class="a-card-img">
                             <h3 class="a-card-title">{{ product.name }}</h3>

@@ -73,7 +73,7 @@ CATEGORY = (
     ('tower', 'Tower'),
     ('bimini', 'Bimini'),
     ('gear', 'Gear'),
-    ('board_rack', 'Board Racks'),
+    ('board-racks', 'Board Racks'),
     ('accessory', 'Accessory'),
 )
 

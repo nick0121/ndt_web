@@ -8,9 +8,6 @@
 {% block content %}
 <main>
     <!--------------------------------------STATIC CONTENT ---------------------------------------------------------------->
-    <!-- <div class="spacer"></div> -->
-    <!-- <div class="header-bg"></div> -->
-    <!-- <h1 class="tower-title">NDT Premium Wakeboard Towers <br> Made in the usa</h1> -->
 
     <!--ADD A BAR FOR CHECKOUT CART AND MESSAGE-->
     <div class="spacer-small top"></div>
@@ -69,7 +66,7 @@
                 {% if towers %}
                     {% for tower in towers %}
     
-                        <a href="{% url 'tower_product' tower.id %}">
+                        <a href="{% url 'tower_product' tower.manufacturer tower.slug %}">
                             <div class="card">
                                 <img src="{{ tower.first_image.image.url }}" alt="{{ tower.first_image.description }}" class="card-image">
                                 
@@ -93,86 +90,6 @@
             <div class="spacer-small"></div>
         </div>
     </div>    
-        <!-- <div class="row">
-            <div class="col-lg-6">
-                <div class="swiper-container">
-                    {% if main_img %}
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                {% if main_img %}
-                                    <img class="swiper-img" src="{{ main_img.0.image.url }}" alt="{{ main_img.0.description }}">
-                                {% else %}
-                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="Main image of wakeboard tower">
-                                {% endif %}
-                            </div>
-                            <div class="swiper-slide">
-                                {% if ang_img %}
-                                    <img class="swiper-img" src="{{ ang_img.0.image.url }}" alt="{{ ang_img.0.description }}">
-                                {% else %}
-                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="angled image of wakeboard tower">
-                                {% endif %}
-                            </div>
-                            <div class="swiper-slide">
-                                {% if back_img %}
-                                    <img class="swiper-img" src="{{ back_img.0.image.url }}" alt="{{ back_img.0.description }}">
-                                {% else %}
-                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="back image of wakeboard tower">
-                                {% endif %}
-                            </div>
-                            <div class="swiper-slide">
-                                {% if coll_img %}
-                                    <img class="swiper-img" src="{{ coll_img.0.image.url }}" alt="{{ coll_img.0.description }}">
-                                {% else %}
-                                    <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="collapsed image of wakeboard tower">
-                                {% endif %}
-                            </div>
-                        </div>
-                    {% else %}
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="swiper-img" src="{% static 'img/00-01_Prostar_195.jpg' %}" alt="main image of wakeboard tower">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_angle.jpg' %}" alt="angled view of wakeboard tower">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_back.jpg' %}" alt="back view of wakeboard tower">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="swiper-img" src="{% static 'img/00-01_Prostar_195_collapsed.jpg' %}" alt="collapsed view of wakeboard tower">
-                            </div>
-                        </div>
-                    {% endif %}
-                </div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <div class="col-lg-6">
-                {% if towers %}
-                    {% with towers|first as tower %}
-                        <h3 class="boat-title">{{ tower.get_name }} tower</h3>
-                    
-                        <p class="boat-text">Patterned after the OEM {{tower.get_name|title}} wakeboard towers that were designed specifically for {{tower.get_name|title}} boats.
-                            New Dimension wakeboard towers are strong, lightweight, and built to withstand extreme conditions. All of our towers are specifically designed and fabricated to fit your exact make and model of boat. No universal joints or adjustments are needed. 
-                            Fabricated using 1 7/8 inch diameter, brushed and anodized 6061 aluminum tubing, creating the ultimate light weight, corrosion resistant tower. The mounting base is custom designed and machined using polished billet aluminum removing the need for a large metal plate bolted to the hull. Every element of the New Dimension wakeboard tower is designed to enhance the look and performance of your boat.</p>
-
-                    {% endwith %}
-                {% else %}
-                    <h3 class="boat-title">The NDT tower</h3>
-                    
-                    <p class="boat-text">The NDT “Hybrid” is a new breed of wakeboard towers designed by New Dimension to meet the ever-changing recreational boat market. The “Hybrid” is a cross between an exact fit OEM style tower and a universal tower with all the fit, form and function detailing you have come to expect from New Dimension Towers. Come check out this exciting new industry first, the NDT “Hybrid”!</p>
-                {% endif %}
-            </div>
-        </div> -->
-        <!-- <div class="arrow-down"></div> -->
-        <!-- <a href="{% url 'installation' %}"><p class="bottom-content">Installation guide | <span><a href="{% url 'faq' %}">FAQ</a></span></p></a> -->
-        
-
-
-    <!-- <div class="spacer-small"></div> -->
-
-
 
         <div class="spacer-small" id="reviews"></div>
 

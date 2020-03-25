@@ -67,9 +67,10 @@ def accessory(request, query):
 
 
 
-def detail(request, product_id):
+def accessory_product(request, category, product_id):
 
-    product = Products.objects.filter(id=product_id)
+    product = Products.objects.filter(slug=product_id)
+    product_id = product[0].id
 
     images = Images.objects.filter(product_id=product_id)
     
@@ -101,9 +102,6 @@ def faq(request):
 
     
 
-############################################################# FAQ VIEWS ############################################
-def sitemap(request):
-    return render(request, 'pages/sitemap.html')
 
 
 ############################################################# FAQ VIEWS ############################################
