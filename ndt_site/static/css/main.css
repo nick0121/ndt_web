@@ -76,7 +76,7 @@ body {
   font-family: 'Abel', sans-serif;
   line-height: 1.2;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-top: 85px;
 }
 
@@ -210,6 +210,11 @@ body {
   padding: 0;
 }
 
+/* .boat-logos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
 .boat-logos {
   width: 90%;
   height: 100px;
@@ -234,7 +239,7 @@ body {
 .boat-manufac img {
   width: 80%;
   margin-bottom: 50px;
-  height: 3.7rem;
+  /* height: 3.7rem; */
   object-fit: contain;
 }
 
@@ -1271,10 +1276,12 @@ footer .copy i {
   padding: 20px;
 }
 
-.heading h2 {
+.heading h1 {
   padding-top: 150px;
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .heading p {
@@ -1908,6 +1915,10 @@ footer .copy i {
     font-size: 1rem;
   }
 
+  .boat-manufac img {
+    max-width: 400px;
+  }
+
 }
 
 /*******************************RULES FOR SCREEN WIDTHS OF 520 PX OR GREATER***************************************/
@@ -1935,7 +1946,7 @@ footer .copy i {
   }
 
   .fullsize-background h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 20px;
     padding-top: 100px;
   }
@@ -2005,6 +2016,10 @@ footer .copy i {
     padding: 0 20px;
     margin-bottom: 25px;
   }
+
+  /* .boat-logos-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  } */
 
   .boat-manufac img {
     width: 90%;
@@ -2296,7 +2311,7 @@ footer .copy i {
   }
 
   .fullsize-background h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 100px 40px 0 40px;
   }
 
@@ -2371,6 +2386,10 @@ footer .copy i {
 
   .call a:hover {
     color: #fff;
+  }
+
+  .heading h1 {
+    font-size: 3rem;
   }
 
 
@@ -2529,7 +2548,7 @@ footer .copy i {
 
 
   .fullsize-background h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     padding: 150px 100px;
     margin-left: 40px;
     margin-right: 40px;
