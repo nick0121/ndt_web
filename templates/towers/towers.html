@@ -11,7 +11,7 @@
 <main>
     <!--------------------------------------STATIC CONTENT ---------------------------------------------------------------->
 
-    <!--ADD A BAR FOR CHECKOUT CART AND MESSAGE-->
+
     <div class="spacer-small top"></div>
     <div class="top-section">
         <div class="top-img">
@@ -23,7 +23,6 @@
         </div>
     </div>
 
-    <!-- <div class="spacer-xs"></div> -->
    
 
     <div class="hero-top">
@@ -43,24 +42,14 @@
 
         </div>
  
-        <!-- <div class="spacer-xs"></div> -->
 
                 <!--Boat gallery-->
         <div class="card-container">
 
-            <!-- <div class="spacer-xs" id="show"></div> -->
             {% if towers %}
-                {% if has_id %}
-                    {% with towers|first as tower %}
-                        <h3>{{tower.get_name|title}}</h3>
-                    {% endwith %}
-                {% elif id != '' %}
-                    <h3>{{id}}</h3>
-                {% else %}
-                    <h3>all NDT towers</h3>
-                {% endif %}
+                <h3>{{title}}<span> TOWERS</span></h3>
             {% else %}
-                <h3>NDT hybrid towers</h3>
+                <h3>No towers to display</h3>
             {% endif %}
             
             <div class="box">
@@ -75,7 +64,7 @@
                                 <h3 class="card-title">{{tower.title}}</h3>
                                 <div class="card-bottom">
                                     <p class="card-price">${{ tower.price | intcomma }}</p>
-                                    <!-- <a href="#!" class="card-icon"><i class="fas fa-plus-circle"></i></a> -->
+                                    <i class="fas fa-plus-circle card-icon"></i>
                                 </div>
                             </div>
                         </a>

@@ -1060,6 +1060,7 @@ footer .copy i {
 /**************** CARD *******************************************/
 .card-container h3 {
   text-transform: uppercase;
+  padding: 0 20px;
 }
 
 .box {
@@ -1135,8 +1136,9 @@ footer .copy i {
   float: right;
 }
 
-.card-icon i {
+i.card-icon {
   color: #9B9FB5;
+  padding: 5px;
 }
 
 /**************** About page styles *******************/
