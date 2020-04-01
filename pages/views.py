@@ -10,7 +10,7 @@ from .models import Images
 
 ############################################################# INDEX VIEWS ############################################
 def index(request):
-    products = Products.objects.filter(images__manufacturer="ndt")
+    products = Products.objects.all()
 
     context = {
         'products': products,
