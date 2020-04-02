@@ -62,9 +62,11 @@ def tower_product(request, manufacturer_name, boat_id):
     tower = Towers.objects.filter(slug=boat_id)
     tower_id = tower[0].id
 
+    images = Images.objects.filter(tower_id=tower_id)
     
     context = {
         'tower': tower,
+        "images": images,
     }
 
     return render(request, 'pages/product.html', context)
